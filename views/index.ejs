@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Everyone - All Chats</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-sky-50 min-h-screen">
+
+    <!-- Title -->
+    <h2 class="font-bold text-3xl text-dodgerblue ml-6 mt-6 mb-8 font-serif">All Chats</h2>
+
+    <!-- Chats List -->
+    <div class="space-y-6 mx-4 md:mx-8 lg:mx-12">
+        <% for(let chat of chats){ %>
+        <div class="p-6 rounded-lg shadow-lg bg-white border border-gray-200">
+            <!-- From & To Info -->
+            <div class="flex justify-between items-center mb-4">
+                <p class="text-gray-500 font-semibold">From: <i class="text-gray-700"><%= chat.from %></i></p>
+                <p class="text-gray-500 font-semibold">To: <i class="text-gray-700"><%= chat.to %></i></p>
+            </div>
+            
+            <!-- Message Content -->
+            <div class="bg-sky-100 p-4 rounded-lg mb-4">
+                <h3 class="text-lg font-medium text-gray-800"><%= chat.msg %></h3>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex justify-end space-x-4">
+                <form action="/chats/<%= chat._id %>/edit" method="get">
+                    <button class="text-dodgerblue hover:text-sky-700">
+                        <i class="fa-regular fa-pen-to-square text-lg"></i>
+                    </button>
+                </form>
+                <form action="/chats/<%= chat._id %>/?_method=delete" method="post">
+                    <button class="text-red-500 hover:text-red-700">
+                        <i class="fa-solid fa-trash text-lg"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Timestamp -->
+            <div class="mt-4 text-right text-sm text-gray-500">
+                <p><%= chat.created_at.toString().split(" ")[4] %></p>
+                <p><%= chat.created_at.toString().split(" ").slice(0, 4).join(" ") %></p>
+            </div>
+        </div>
+        <% } %>
+    </div>
+
+    <!-- New Chat Button -->
+    <div class="mt-12 text-center">
+        <form action="/chats/new" method="get">
+            <button class="rounded-full bg-dodgerblue text-sky-700 py-2 px-6 text-lg shadow-lg hover:bg-sky-600 hover:text-white hover:scale-105 transition-transform duration-300">New Chat</button>
+        </form>
+    </div>
+
+    <!-- Spacing at the bottom -->
+    <div class="mb-12"></div>
+
+</body>
+</html>

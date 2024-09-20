@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Message</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-sky-50 min-h-screen flex flex-col items-center justify-center">
+
+    <!-- Title -->
+    <h2 class="font-bold text-3xl text-dodgerblue mb-6 font-serif">Edit Your Message</h2>
+
+    <!-- Info About Sender and Receiver -->
+    <p class="text-xl font-medium text-gray-700 mb-8">
+        This message was sent by 
+        <b><i class="text-dodgerblue"><%= chat.from %></i></b> 
+        to 
+        <b><i class="text-dodgerblue"><%= chat.to %></i></b>.
+    </p>
+
+    <!-- Form Container -->
+    <div class="bg-white p-8 rounded-lg shadow-lg border border-cyan-600 w-full max-w-lg mx-auto">
+
+        <!-- Edit Message Form -->
+        <form action="/chats/<%= chat._id %>?_method=PUT" method="post" class="space-y-6">
+            <!-- Message Textarea -->
+            <div>
+                <label class="block text-lg font-medium text-gray-700 mb-2" for="msg">Edit Message:</label>
+                <textarea name="msg" id="msg" class="w-full border-2 border-gray-300 rounded-md p-3 h-32 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"><%= chat.msg %></textarea>
+            </div>
+
+            <!-- Save Button -->
+            <div class="flex justify-center">
+                <button type="submit" class="w-full py-3 px-6 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

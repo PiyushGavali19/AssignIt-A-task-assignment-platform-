@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Everyone - Connect with Anyone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-sky-300">
+    <!-- Navbar -->
+    <nav class="bg-dodgerblue p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">Chat Everyone</a>
+            <ul class="flex space-x-6 text-white">
+                <li><a href="#features" class="hover:text-gray-200">Features</a></li>
+                <li><a href="#about" class="hover:text-gray-200">About</a></li>
+                <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-sky-blue-500 text-center py-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-white">Welcome to Chat Everyone</h1>
+        <p class="text-white text-lg mt-4">Connect with anyone, anywhere, effortlessly.</p>
+        <form action="/chats" mathod="get">
+            <button class="mt-8 bg-white text-dodgerblue font-semibold py-3 px-6 rounded-full hover:bg-gray-100 transition duration-300">Get Started</button>
+        </form>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dodgerblue mb-8">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-dodgerblue">Real-time Chat</h3>
+                    <p class="mt-4 text-gray-600">Instant messaging with live updates.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-dodgerblue">Secure Conversations</h3>
+                    <p class="mt-4 text-gray-600">We respect your Privacy.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-semibold text-dodgerblue">Easy to Use</h3>
+                    <p class="mt-4 text-gray-600">Simple interface to connect with anyone, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-dodgerblue mb-8">About Us</h2>
+            <p class="text-center text-gray-700 max-w-2xl mx-auto">Chat Everyone is your go-to platform for seamless communication. Whether you're connecting with friends, family, or coworkers, our user-friendly interface and secure features make it simple and enjoyable.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dodgerblue text-white py-8">
+        <div class="container mx-auto text-center">
+            <h3 class="text-lg font-semibold">Contact Us</h3>
+            <p class="mt-4">Email: support@chateveryone.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <div class="mt-6">
+                <a href="#" class="text-white hover:text-gray-200 mx-2">Privacy Policy</a> | 
+                <a href="#" class="text-white hover:text-gray-200 mx-2">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
