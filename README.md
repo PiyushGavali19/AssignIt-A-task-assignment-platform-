@@ -1,2 +1,2 @@
-# Chat-Everyone
-Chat Everyone is a real-time messaging platform that allows users to connect and communicate by entering the name of the person they wish to chat with. Built with Node.js, Express, and Tailwind CSS, this project features a clean and user-friendly interface, enabling seamless conversations and a vibrant chatting experience.
+# Assign It
+A task management web application where users can assign tasks directly to individuals by mentioning their names. The platform streamlines task delegation, ensuring clarity and accountability for each assigned task. Built with Node.js, Express, and Tailwind CSS, this project features a clean and user-friendly interface, enabling seamless conversations and a vibrant chatting experience.
